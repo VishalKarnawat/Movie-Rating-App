@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Ubuntu')
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #FC766AFF ;
+	font-family: "poppins" , sans-serif;
+	margin: 0;
+}
+
+header{
+	background-color: #5B84B1FF;
+	padding: 1.5rem; 
+	justify-content: flex-end;
+	display: flex;
+}
+
+header h2{
+	margin: auto;
+	color: #F2AA4CFF;
+	font-size: 1.75em;
+}
+
+
+.search {
+	padding: 0.5rem 1rem;
+	border: 2px solid #ADEFD1FF;
+	border-radius: 50px;
+	background-color: transparent;
+	font-family: inherit;
+	font-size: 1rem;
+	color: black;
+}
+
+.search::placeholder{
+	color: #00539CFF;
+}
+
+.search:focus {
+	background-color: #ADEFD1FF;
+	outline: none;
+}
+
+
+main{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.movie{
+	background-color: #5B84B1FF;
+	border-radius: 3px;
+	box-shadow: 0 4px 5px rgba(0 0 0 0.2); 
+	overflow: hidden;
+	width: 300px; 
+	margin: 2rem;
+	position: relative;
+}
+
+.movie img{
+	width: 100%;
+}
+
+.movie-info{
+	color: #eee;
+	display: flex;
+	align-items: center;
+	color: #eee;
+	justify-content: space-between;
+	padding:0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+	margin: 0;
+}
+
+.movie-info span{
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 0.25rem 0.5rem;
+	font-weight: bold;
+}
+
+.movie-info span.green{
+	color: rgb(39,189,39);
+}
+
+.movie-info span.orange{
+	color: orange;
+}
+
+.movie-info span.red{
+	color: red;
+}
+
+.overview{
+	background-color: #fff;
+	padding: 2rem;
+	position: absolute;
+	max-height: 100%;
+	overflow: auto;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transform: translateY(101%);
+	transition: transform 0.3s ease-in;
+}
+
+.overview h3{
+	margin-top: 0;
+}
+
+.movie:hover .overview{
+	transform: translateY(0);
+}
